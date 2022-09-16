@@ -1,0 +1,1346 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+
+    --white-1:#FFF;
+    --gray-1:rgb(232, 232, 232);
+    --gray-2:rgb(207, 207, 207);
+    --gray-3:rgb(255, 255, 255);
+    --gray-4:gray;
+    --black-1:#282828;
+    --black-2:rgb(32, 32, 32);
+    --black-3:rgb(37, 37, 37);
+    --black-4:rgb(53, 53, 53);
+    --black-transparent-1:rgba(32, 32, 32, 0.65);
+    --green-claro-1:rgba(0, 255, 0, 0.93);
+    --blue-claro-1:rgb(0, 179, 255);
+    --amarelo-claro-1:rgb(250 223 43);
+
+
+    --background-color-fundo-1: var( --black-1 );
+    --background-color-fundo-2: var( --white-1 );
+
+    --tamanho-image-1:40px;
+    --tamanho-image-2:30px;
+    --tamanho-image-3:70px;
+
+    --height-1:80px;
+
+    --top-principal:82px;
+
+    --min-width-suspenco:320px;
+
+    --font-size-1:22px;
+}
+
+
+@media (max-width:740px){
+
+    body{
+        width: 100%;
+        height: 100vh;
+        background-color: var( --background-color-fundo-1 );
+    }
+
+        /* cabecalho */
+
+    .image{
+        width: var( --tamanho-image-1 );
+    }
+
+    .c-principal{
+        position: fixed;
+        width: 100%;
+        min-height: var( --height-1 );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var( --background-color-fundo-2);
+        border-bottom: 2px solid var( --black-2 );
+    }
+    .c-principal__logo{
+        width: 18%;
+        display: flex;
+        align-items: center;
+        padding-left: 2%;
+        min-height: var( --height-1 );
+    }
+    .logo__image{
+        width: var( --tamanho-image-3 );
+    }
+
+
+    .c-principal__organizacao{
+        width: 78%;
+        min-height: var( --height-1 );
+        display: flex;  
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 2%;
+    }
+
+
+    .organizacao__bloco-botoesPart1{
+        width: 40px;
+        min-height: var( --height-1 );
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+
+   .bloco-botoesPart1__BotaoMenu{
+        width: 30px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+   }
+   .BotaoMenu__imagem{
+        width: var( --tamanho-image-2 );
+   }
+
+
+   .bloco-botoesPart1__Botoes{
+        position: absolute;
+        background-color: transparent;
+        min-width: 192px;
+        width: 60%;
+        max-width: 335px;
+        height: auto;
+        top: var( --top-principal );
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+   }
+   .botao{
+        width: 100%;
+        height: 70px;
+        border: none;
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        font-size: var( --font-size-1 );
+   }
+   .botao img{
+    width: 40px;
+
+    }
+   .botao a{
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: #000;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 10px;
+    }
+
+
+   .organizacao__bloco-botoesPar2{
+        width: 80px;
+        min-height: var( --height-1 );
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+   }
+   .bloco-botoesPar2__pesquisar{
+        width: 30px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        margin-right: 10px;
+   }
+   .pesquisar__imagem{
+        width: var( --tamanho-image-2 );
+   }
+
+
+   .bloco-botoesPar2__carrinho{
+        padding: 0;
+        border: none;
+        background-color: transparent;
+   }
+   .carrinho__imagem{
+        
+   }
+   .carrinho__quantidadeProdutos{
+        border-radius: 50%;
+        padding: 2px 5px;
+        position: absolute;
+        top: 25px;
+        left:92%;
+        transform: translateX(-8%);
+        background-color: var(--green-claro-1);
+        font-family: 'Bebas Neue', cursive;
+   }
+
+        /* carrinho de compras */
+
+   .bloco-botoesPar2__carrinhoCompras{
+        box-sizing: border-box;
+        min-width: var( --min-width-suspenco );
+        width: 100%;
+        max-width: 320px;
+        height: 100vh;
+        background-color: var( --black-transparent-1 );
+        position: absolute;
+        top: var( --top-principal );
+        right: 0px;  
+   }
+   .carrinhoCompras__produtos{
+        width: 100%;
+        height: 70%;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+   }
+    .carrinhoCompras__produtos::-webkit-scrollbar{
+        width: 8px;
+        background-color: var( --black-3 );
+    }
+    .carrinhoCompras__produtos::-webkit-scrollbar-thumb{
+        width: 8px;
+        background-color: var( --gray-4 );
+        border-radius: 20px;
+    }
+   .carrinhoCompras__informacoes{
+        width: 100%;
+        height: 6%;
+        background-color: var( --black-2 );
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 5px;
+        color: var( --gray-1 );
+        font-size: 20px;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+   }
+   .informacoes__nome-valor{
+   }    
+   .informacoes__soma-total{
+   }
+   .carrinhoCompras__finalizar-compra{
+        width: 100%;
+        height: 9%;
+        background-color: var( --green-claro-1 );
+        border: none;
+        padding: 0px;
+        font-size: var( --font-size-1 );
+        font-family: 'Kdam Thmor Pro', sans-serif;
+   }
+
+        /* produtos carrinho */
+
+    .produtos__produto{
+        background-color: var( --black-2 );
+        min-width: 100%;
+        min-height: 120px;
+        max-height: 120px;
+        display: flex;
+        border-radius: 55px 0px 0px 55px;
+        margin: 2px 0px;
+    }
+
+    .produto__bloco-imagem{
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        min-width: 120px;
+        width: 120px;
+        max-width: 120px;
+        min-height: 120px;
+        height: 120px;
+        max-height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 55px 0px 0px 55px;
+        background-color: #FFF;
+        border-left: 1px solid var(--black-2);
+        padding-left: 10px;
+    }
+    .produto__bloco-imagem img {
+        width: 50%;
+    }
+
+    .produto__nome-botoes{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5px 0px 5px 5px;
+    }
+
+    .nome-botoes__nome-lixo{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        padding-right: 5px;
+    }
+    .nome-botoes__nomeProduto{
+        font-size: 20px;
+        color: var( --gray-1 );
+        border-radius: 0px 10px 10px 0px;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+    }
+    .nome-botoes__lixo{
+        border: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+    .nome-botoes__lixo img {
+        width: var( --tamanho-image-1 );
+    }  
+
+
+    .nome-botoes__caracteristicas{
+        position: absolute;
+        display: none;
+    }
+    .nome-botoes__valor{
+        color: var(--green-claro-1);
+        font-family: 'Kdam Thmor Pro', sans-serif;
+    }
+
+    .nome-botoes__add-subtrair{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(14, 14, 14, 0.468);
+        padding: 5px 5px;
+        border-radius: 10px;
+    }
+    .add-subtrair__add{
+        border: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+    .add-subtrair__add img{
+        width: var( --tamanho-image-2 );
+    }
+    .add-subtrair__quantidadeProduto{
+        width: 60px;
+        background-color: var( --gray-2 );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+        font-size: 15px;
+    }
+    .add-subtrair__subtrair{
+        border: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+    .add-subtrair__subtrair img{
+        width: var( --tamanho-image-2 );
+    }   
+
+    /* barra Pesquisa */
+
+    .bloco-botoesPar2__barraPesquisa{
+        position: absolute;
+        top: var( --top-principal );
+        left: 50%;
+        transform: translateX(-50%);
+        right: 0px;
+        min-width: var( --min-width-suspenco );
+        width:65%;
+        max-width: 400px;
+        min-height: 40px;
+        display:flex;
+    }
+    .barraPesquisa__texto{
+        box-sizing: border-box;
+        width: 85%;
+        min-height: 40px;
+        outline: 0;
+        border: none;
+        padding: 0px;
+        background-color: var( --gray-3 );
+        padding-left: 30px;
+    }
+        .barraPesquisa__texto:hover{
+            border-bottom: 2px solid var(--amarelo-claro-1);
+        }
+        .barraPesquisa__texto::placeholder{
+            transition: 500ms;
+            font-family: 'Kdam Thmor Pro', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 0px;
+            opacity: 100%;
+        }
+        .barraPesquisa__texto:focus::placeholder{
+            transition: 500ms;
+            padding-left: 20px;
+            opacity: 0%;
+        }
+    .barraPesquisa__botao{
+        width: 15%;
+        min-height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        padding: 0px;
+        background-color: var( --amarelo-claro-1 );
+    }
+    .barraPesquisa__botao img{
+        width: var( --tamanho-image-2 );
+    }
+
+        /* corpo */
+
+    .entrada{
+        overflow: hidden;
+        padding-top: 80px;
+        width: 100%;
+        height: 45%;
+        background-image: url(../img/estrelas.png);
+        background-size: 200% 200%;
+        background-position: 0% 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        animation: efeitoEstrelas 60s ease-in-out infinite alternate;
+    }
+
+        @keyframes efeitoEstrelas {
+            to{
+                background-position: 100% 0%;
+            }
+        }
+
+    .entrada__logo2{
+        width: 210px;
+    }
+    
+    .texto{
+        box-sizing: border-box;
+        width: 100%;
+        height: 55%;
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0px 10px 0px;
+    } 
+
+    .texto__imagens{
+        width: 100%;
+        min-height: 88%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imagens__bloco{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        padding: 0px 10px;
+    }
+    .bloco1{
+        background-color: #000;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .bloco2{
+        background-color: #000;
+    }
+    .bloco__texto{
+        display: none;
+    }
+    .bloco__texto p {
+        display: none;
+    }
+
+    .bloco__blocoImagem{
+        overflow: hidden;
+        min-width: 300px;
+        max-width: 300px;
+        height: 99%;
+        background-color: bisque;
+    }
+    .bloco__blocoImagem img{
+        width: 100%;
+    }
+
+
+    .texto__seta{
+        box-sizing: border-box;
+        min-width: 100%;
+        min-height: 12%;
+        display: flex;
+        align-items: flex-end;
+        padding-left: 20px;
+        padding-bottom: 0%;
+        background-color: transparent;
+
+        animation: setaAnimation 400ms cubic-bezier(1,.24,0,.83) infinite alternate;
+    }
+    .texto__seta img{
+        width: 30px;
+    }
+
+        @keyframes setaAnimation {
+            to{
+                padding-bottom: 1%;
+            }
+        }
+
+        /* vitrine */
+
+    .produtos{
+        width: 100%;
+        height: auto;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(25,25,25,1) 50%, rgba(40,40,40,1) 100%);
+        padding: 10px 0px 30px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .produtos__produtoVitrine{
+        transition: 500ms;
+        min-width: 300px;
+        max-width: 300px;
+        min-height: 500px;
+        max-height: 500px;
+        background-color: var(--black-transparent-1);
+        border-radius: 10px;
+        margin: 0px 10px 10px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 15px;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+        border-bottom: 2px solid #FFF;
+        color: var(--gray-2);
+        box-shadow: 0px 0px 6px 0px #000000;
+    }
+        .produtos__produtoVitrine:hover {
+            transition: 500ms;
+            border-bottom: 2px solid rgb(250 223 43);
+        }
+    .produtos__blocoImagem{
+        overflow: hidden;
+        min-width: 300px;
+        min-height: 250px;
+        height: 250px;
+        border-radius: 8px 8px 0px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 2px 7px 6px -5px #000000;
+        background-color: #FFF;
+    }
+    .produtoVitrine__imagem{
+        transition: 500ms;
+        width: 40%;
+    }  
+        .produtoVitrine__imagem:hover{
+            transition: 200ms;
+            width: 113%
+        }  
+
+    .produtos__nome{
+        font-size: 20px;
+        padding-left: 10px;
+    }
+    .produtos__tipo{
+        display: none;
+    }
+    .produtos__cor{
+        display: none;
+        padding-left: 10px;
+    }
+    .produtos__peso{
+        display: none;
+    }
+    .produtos__dimencoes{
+        padding-left: 10px;
+    }
+    .produtos__quantidade{
+        padding-left: 10px;
+        color:var(--amarelo-claro-1);
+    }
+    .produtos__valor{
+        padding-left: 10px;
+        color:crimson;
+        text-decoration:line-through;
+    }
+    .produtos__desconto{
+        padding-left: 10px;
+        color:var(--green-claro-1)
+    }
+    .produtos__enviarCarrinho{
+        width: 80%;
+        height: 40px;
+        padding-left: 10px;
+        border-radius: 8px;
+        border: none;
+        padding: 0px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        background: rgb(24,24,24);
+        background: linear-gradient(90deg, rgba(24,24,24,1) 0%, rgba(29,89,29,1) 47%, rgba(0,225,0,1) 100%);     
+        box-shadow: 6px 6px 6px -5px #000000; 
+        padding-left: 3%;
+        display: flex;
+
+        align-items: center;
+
+    }
+    .produtos__enviarCarrinho:focus{
+
+        animation: carrinhoAndar 1s 200ms ease 2 alternate;
+    }
+
+        @keyframes carrinhoAndar {
+            to{
+                padding-left: 65%;
+            }
+        }
+
+    .produtos__enviarCarrinho::after{
+        overflow: hidden;
+        content: "Comprar";
+        margin-left: 23%;
+        font-size: 17px;
+        opacity: 100%;
+    }
+    .produtos__enviarCarrinho:focus::after{
+        content: "Comprar";
+
+        animation: palavraSumirBotaoComprar 1.2s ease 2 alternate;
+    }
+
+        @keyframes palavraSumirBotaoComprar {
+            20%{
+                opacity: 0%;
+            }
+            to{
+                opacity: 0%;
+            }
+        }
+
+    .produtos__enviarCarrinho img{
+        width: 30px;
+    }
+
+
+        /* footer */
+     
+    .informacoes{
+        box-sizing: border-box;
+        min-width: 100%;
+        height: 50%;
+        background: rgb(39,39,39);
+        background: linear-gradient(180deg, rgba(39,39,39,1) 0%, rgba(27,27,27,1) 47%, rgba(0,0,0,1) 100%);
+        box-shadow: 0px 0px 6px 0px #000000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2%;
+    }
+
+    .informacoes__linksRedes{
+        box-sizing: border-box;
+        width: 98%;
+        max-width: 600px;
+        height: auto;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-bottom: 10%;
+    }
+    .informacoes__link{
+        min-width: 15%;
+    }
+    .informacoes__link img{
+        min-width: 100%;
+    }
+
+
+}
+@media (min-width:741px){
+
+    body{
+        width: 100%;
+        height: 100vh;
+        background-color: var( --background-color-fundo-1 );
+        
+    }
+    body::-webkit-scrollbar{
+        width: 0.5vw;
+        background-color: #282828;
+    }
+    body::-webkit-scrollbar-thumb{
+        width: 0.5vw;
+        background-color: #FFF;
+        border-radius: 8px;
+    }
+    body:hover::-webkit-scrollbar-thumb{
+        width: 20px;
+    }
+
+        /* cabecalho */
+
+    .image{
+        width: var( --tamanho-image-1 );
+    }
+
+    .c-principal{
+        position: fixed;
+        width: 100%;
+        min-height: var( --height-1 );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var( --background-color-fundo-2);
+        border-bottom: 2px solid var( --black-2 );
+    }
+    .c-principal__logo{
+        width: 18%;
+        display: flex;
+        align-items: center;
+        padding-left: 2%;
+        min-height: var( --height-1 );
+    }
+    .logo__image{
+        width: var( --tamanho-image-3 );
+    }
+
+
+    .c-principal__organizacao{
+        width: 78%;
+        min-height: var( --height-1 );
+        display: flex;  
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 2%;
+    }
+
+
+    .organizacao__bloco-botoesPart1{
+        width: 40px;
+        min-height: var( --height-1 );
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+
+   .bloco-botoesPart1__BotaoMenu{
+        width: 30px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+   }
+   .BotaoMenu__imagem{
+        width: var( --tamanho-image-2 );
+   }
+
+
+   .bloco-botoesPart1__Botoes{
+        position: absolute;
+        background-color: transparent;
+        min-width: 192px;
+        width: 60%;
+        max-width: 335px;
+        height: auto;
+        top: var( --top-principal );
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+   }
+   .botao{
+        width: 100%;
+        height: 70px;
+        border: none;
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        font-size: var( --font-size-1 );
+   }
+   .botao img{
+    width: 40px;
+
+    }
+   .botao a{
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: #000;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 10px;
+    }
+
+
+   .organizacao__bloco-botoesPar2{
+        width: 80px;
+        min-height: var( --height-1 );
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+   }
+   .bloco-botoesPar2__pesquisar{
+        width: 30px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        margin-right: 10px;
+   }
+   .pesquisar__imagem{
+        width: var( --tamanho-image-2 );
+   }
+
+
+   .bloco-botoesPar2__carrinho{
+        padding: 0;
+        border: none;
+        background-color: transparent;
+   }
+   .carrinho__imagem{
+        
+   }
+   .carrinho__quantidadeProdutos{
+        border-radius: 50%;
+        padding: 2px 5px;
+        position: absolute;
+        top: 25px;
+        left:94.5%;
+        transform: translateX(-5.5%);
+        background-color: var(--green-claro-1);
+        font-family: 'Bebas Neue', cursive;
+   }
+
+        /* carrinho de compras */
+
+   .bloco-botoesPar2__carrinhoCompras{
+        box-sizing: border-box;
+        min-width: var( --min-width-suspenco );
+        width: 100%;
+        max-width: 520px;
+        height: 100vh;
+        background-color: var( --black-transparent-1 );
+        position: absolute;
+        top: var( --top-principal );
+        right: 0px;  
+   }
+   .carrinhoCompras__produtos{
+        width: 100%;
+        height: 70%;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+   }
+    .carrinhoCompras__produtos::-webkit-scrollbar{
+        width: 8px;
+        background-color: var( --black-3 );
+    }
+    .carrinhoCompras__produtos::-webkit-scrollbar-thumb{
+        width: 8px;
+        background-color: var( --gray-4 );
+        border-radius: 20px;
+    }
+   .carrinhoCompras__informacoes{
+        width: 100%;
+        height: 6%;
+        background-color: var( --black-2 );
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 5px;
+        color: var( --gray-1 );
+        font-size: 20px;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+   }
+   .informacoes__nome-valor{
+   }    
+   .informacoes__soma-total{
+   }
+   .carrinhoCompras__finalizar-compra{
+        width: 100%;
+        height: 9%;
+        background-color: var( --green-claro-1 );
+        border: none;
+        padding: 0px;
+        font-size: var( --font-size-1 );
+        font-family: 'Kdam Thmor Pro', sans-serif;
+   }
+
+        /* produtos carrinho */
+
+    .produtos__produto{
+        background-color: var( --black-2 );
+        min-width: 100%;
+        min-height: 120px;
+        max-height: 120px;
+        display: flex;
+        border-radius: 55px 0px 0px 55px;
+        margin: 2px 0px;
+    }
+
+    .produto__bloco-imagem{
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        min-width: 120px;
+        width: 120px;
+        max-width: 120px;
+        min-height: 120px;
+        height: 120px;
+        max-height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 55px 0px 0px 55px;
+        background-color: #FFF;
+        border-left: 1px solid var(--black-2);
+        padding-left: 10px;
+    }
+    .produto__bloco-imagem img {
+        width: 50%;
+    }
+
+    .produto__nome-botoes{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5px 0px 5px 5px;
+    }
+
+    .nome-botoes__nome-lixo{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        padding-right: 5px;
+    }
+    .nome-botoes__nomeProduto{
+        font-size: 20px;
+        color: var( --gray-1 );
+        border-radius: 0px 10px 10px 0px;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+    }
+    .nome-botoes__lixo{
+        border: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+    .nome-botoes__lixo img {
+        width: var( --tamanho-image-1 );
+    }  
+
+
+    .nome-botoes__caracteristicas{
+        position: absolute;
+        display: none;
+    }
+    .nome-botoes__valor{
+        color: var(--green-claro-1);
+        font-family: 'Kdam Thmor Pro', sans-serif;
+    }
+
+    .nome-botoes__add-subtrair{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(14, 14, 14, 0.468);
+        padding: 5px 5px;
+        border-radius: 10px;
+    }
+    .add-subtrair__add{
+        border: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+    .add-subtrair__add img{
+        width: var( --tamanho-image-2 );
+    }
+    .add-subtrair__quantidadeProduto{
+        width: 60px;
+        background-color: var( --gray-2 );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+        font-size: 15px;
+    }
+    .add-subtrair__subtrair{
+        border: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+    .add-subtrair__subtrair img{
+        width: var( --tamanho-image-2 );
+    }   
+
+    /* barra Pesquisa */
+
+    .bloco-botoesPar2__barraPesquisa{
+        position: absolute;
+        top: var( --top-principal );
+        left: 50%;
+        transform: translateX(-50%);
+        right: 0px;
+        min-width: var( --min-width-suspenco );
+        width:65%;
+        max-width: 400px;
+        min-height: 40px;
+        display:flex;
+    }
+    .barraPesquisa__texto{
+        box-sizing: border-box;
+        width: 85%;
+        min-height: 40px;
+        outline: 0;
+        border: none;
+        padding: 0px;
+        background-color: var( --gray-3 );
+        padding-left: 30px;
+    }
+        .barraPesquisa__texto:hover{
+            border-bottom: 2px solid var(--amarelo-claro-1);
+        }
+        .barraPesquisa__texto::placeholder{
+            transition: 500ms;
+            font-family: 'Kdam Thmor Pro', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 0px;
+            opacity: 100%;
+        }
+        .barraPesquisa__texto:focus::placeholder{
+            transition: 500ms;
+            padding-left: 20px;
+            opacity: 0%;
+        }
+    .barraPesquisa__botao{
+        width: 15%;
+        min-height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        padding: 0px;
+        background-color: var( --amarelo-claro-1 );
+    }
+    .barraPesquisa__botao img{
+        width: var( --tamanho-image-2 );
+    }
+
+        /* corpo */
+
+    .entrada{
+        overflow: hidden;
+        padding-top: 80px;  
+        width: 100%;
+        height: 60%;
+        background-image: url(../img/estrelas.png);
+        background-size: 150% 150%;
+        background-position: 0% 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        animation: efeitoEstrelas 70s ease-in-out infinite alternate;
+    }
+
+        @keyframes efeitoEstrelas {
+            to{
+                background-position: 100% 0%;
+            }
+        }
+
+    .entrada__logo2{
+        width: 410px;
+    }
+    
+    .texto{
+        box-sizing: border-box;
+        width: 100%;
+        height: 40%;
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0px 10px 0px;
+    } 
+
+    .texto__imagens{
+        width: 100%;
+        min-height: 88%;
+        display: flex;
+    }
+
+    .imagens__bloco{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0px 10px;
+
+    }
+    .bloco1{
+        background-color: #000;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .bloco2{
+        background-color: #000;
+    }
+    .bloco__texto{
+        display: none;
+    }
+    .bloco__texto p {
+        display: none;
+    }
+
+    .bloco__blocoImagem{
+        overflow: hidden;
+        min-width: 300px;
+        max-width: 400px;
+        height: 99%;
+        background-color: #000;
+    }
+    .bloco__blocoImagem img{
+        width: 100%;
+    }
+
+    .bloco__blocoImagem img:hover{
+        border-bottom: 2px solid var(--amarelo-claro-1);
+    }
+
+
+    .texto__seta{
+        box-sizing: border-box;
+        min-width: 100%;
+        min-height: 12%;
+        display: flex;
+        align-items: flex-end;
+        padding-left: 20px;
+        padding-bottom: 0%;
+        background-color: transparent;
+
+        animation: setaAnimation 400ms cubic-bezier(1,.24,0,.83) infinite alternate;
+    }
+    .texto__seta img{
+        width: 30px;
+    }
+
+        @keyframes setaAnimation {
+            to{
+                padding-bottom: 1%;
+            }
+        }
+
+        /* vitrine */
+
+    .produtos{
+        width: 100%;
+        height: auto;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(25,25,25,1) 50%, rgba(40,40,40,1) 100%);
+        padding: 10px 0px 30px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .produtos__produtoVitrine{
+        transition: 500ms;
+        min-width: 300px;
+        max-width: 300px;
+        min-height: 500px;
+        max-height: 500px;
+        background-color: var(--black-transparent-1);
+        border-radius: 10px;
+        margin: 0px 10px 10px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 15px;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+        border-bottom: 2px solid #FFF;
+        color: var(--gray-2);
+        box-shadow: 0px 0px 6px 0px #000000;
+    }
+        .produtos__produtoVitrine:hover {
+            transition: 500ms;
+            border-bottom: 2px solid rgb(250 223 43);
+        }
+    .produtos__blocoImagem{
+        overflow: hidden;
+        min-width: 300px;
+        min-height: 250px;
+        height: 250px;
+        border-radius: 8px 8px 0px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 2px 7px 6px -5px #000000;
+        background-color: #FFF;
+    }
+    .produtoVitrine__imagem{
+        transition: 500ms;
+        width: 40%;
+    }  
+        .produtoVitrine__imagem:hover{
+            transition: 200ms;
+            width: 45%
+        }  
+
+    .produtos__nome{
+        font-size: 20px;
+        padding-left: 10px;
+    }
+    .produtos__tipo{
+        display: none;
+    }
+    .produtos__cor{
+        display: none;
+        padding-left: 10px;
+    }
+    .produtos__peso{
+        display: none;
+    }
+    .produtos__dimencoes{
+        padding-left: 10px;
+    }
+    .produtos__quantidade{
+        padding-left: 10px;
+        color:var(--amarelo-claro-1);
+    }
+    .produtos__valor{
+        padding-left: 10px;
+        color:crimson;
+        text-decoration:line-through;
+    }
+    .produtos__desconto{
+        padding-left: 10px;
+        color:var(--green-claro-1)
+    }
+    .produtos__enviarCarrinho{
+        width: 80%;
+        height: 40px;
+        padding-left: 10px;
+        border-radius: 8px;
+        border: none;
+        padding: 0px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        background: rgb(24,24,24);
+        background: linear-gradient(90deg, rgba(24,24,24,1) 0%, rgba(29,89,29,1) 47%, rgba(0,225,0,1) 100%);     
+        box-shadow: 6px 6px 6px -5px #000000; 
+        padding-left: 3%;
+        display: flex;
+
+        align-items: center;
+
+    }
+    .produtos__enviarCarrinho:focus{
+
+        animation: carrinhoAndar 1s 200ms ease 2 alternate;
+    }
+
+        @keyframes carrinhoAndar {
+            to{
+                padding-left: 65%;
+            }
+        }
+
+    .produtos__enviarCarrinho::after{
+        overflow: hidden;
+        content: "Comprar";
+        margin-left: 23%;
+        font-size: 17px;
+        opacity: 100%;
+    }
+    .produtos__enviarCarrinho:focus::after{
+        content: "Comprar";
+
+        animation: palavraSumirBotaoComprar 1.2s ease 2 alternate;
+    }
+
+        @keyframes palavraSumirBotaoComprar {
+            20%{
+                opacity: 0%;
+            }
+            to{
+                opacity: 0%;
+            }
+        }
+
+    .produtos__enviarCarrinho img{
+        width: 30px;
+    }
+
+
+        /* footer */
+     
+    .informacoes{
+        box-sizing: border-box;
+        min-width: 100%;
+        height: 50%;
+        background: rgb(39,39,39);
+        background: linear-gradient(180deg, rgba(39,39,39,1) 0%, rgba(27,27,27,1) 47%, rgba(0,0,0,1) 100%);
+        box-shadow: 0px 0px 6px 0px #000000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2%;
+    }
+
+    .informacoes__linksRedes{
+        box-sizing: border-box;
+        width: 98%;
+        max-width: 600px;
+        height: auto;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-bottom: 10%;
+    }
+    .informacoes__link{
+        min-width: 15%;
+    }
+    .informacoes__link img{
+        min-width: 100%;
+    }
+
+
+}
+
